@@ -1,11 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Hello github</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>Notes Planner</title>
+  </head>
+  <body>
+    <script>
+        if (localStorage.getItem("mySiteTheme") === "dark") {
+            document.body.classList.add("dark-theme");
+        }
+    </script>
+
+    <h1>Notes</h1>
+
+<div class="input-container">
+    <input type="text" placeholder="Title" class="note-input1">
+    <input type="text" placeholder="Your text here..." class="note-input2">
+    <input type="date" class="note-input3">
+  
+    <select class="status-filter">
+    <option value="active">Active</option>
+    <option value="archived">Archive</option>
+</select>
+
+  <button class="add-btn">
+    Add note
+  </button>
+
+  <button class="add-btn-theme">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+</div>
+
+<div class="notes-container"></div>
+
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"
+      integrity="sha384-rOA1PnstxnOBLzCLMcre8ybwbTmemjzdNlILg8O7z1lUkLXozs4DHonlDtnE7fpc"
+      crossorigin="anonymous"
+    ></script>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    
+    <script src="script.js"></script>
+  </body>
 </html>
